@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsplash</title>
+</head>
+<style>
+    body {
+        background-color: #ddd;
+    }
+    
+    .image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .image img {
+        height: 580px;
+    }
+</style>
+<div class="image">
+
+</div>
+
+<body>
+    <script>
+        let image = document.querySelector('.image');
+
+        // fetch('https://api.unsplash.com/photos/nDV6ahWLvEg?client_id=C3YE5sTvMFkIDl6ittSgOwvO4QtiPQQDO5kYXoKZUuI')
+        //     .then(response => response.json())
+        //     .then(json => console.log(json))
+
+        let width = Math.floor(Math.random() * 500);
+        let height = Math.floor(Math.random() * 500);
+
+        image.innerHTML = `<img src="http://source.unsplash.com/random/${width}*${height}"></img>`
+    </script>
+</body>
+
+</html>
